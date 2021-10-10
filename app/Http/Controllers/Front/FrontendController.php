@@ -8,7 +8,7 @@ use App\Service;
 use App\Client;
 use App\Appointment;
 use Illuminate\Support\Facades\DB;
-
+use Session;
 class FrontendController extends Controller
 {
     public function index(){
@@ -34,5 +34,9 @@ class FrontendController extends Controller
             'appointment_id' => $appoin->id,
             'service_id' => $request->service_id
         ]);
+        Session::flash('message', 'Vos coordonnées pour la réservation sont soumises. Nous vous contacterons bientôt.!');
+        Session::flash('alert-class', 'alert-success');
+
+        return redirect()->back();
     }
 }

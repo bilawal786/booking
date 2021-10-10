@@ -84,6 +84,9 @@
                 <!-- /top-wizard -->
                 <form action="{{route('form.submit')}}" method="POST">
                     @csrf
+                    @if(Session::has('message'))
+                        <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+                    @endif
                     <input id="website" name="website" type="text" value="">
                     <!-- Leave for security protection, read docs for details -->
                     <div id="middle-wizard">
