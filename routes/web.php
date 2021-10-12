@@ -37,4 +37,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('appointments', 'AppointmentsController');
 
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
+    Route::get('settings', 'SystemCalendarController@settings')->name('settings');
+    Route::post('setting/store', 'SystemCalendarController@settingStore')->name('setting.store');
 });

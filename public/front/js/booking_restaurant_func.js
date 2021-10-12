@@ -52,7 +52,21 @@
 	        "singleDatePicker": true,
 	        "opens": "left",
 	        locale: {
-	            cancelLabel: 'Clear'
+	            cancelLabel: 'Clear',
+                "separator": " - ",
+                "applyLabel": "Apply",
+                "cancelLabel": "Cancel",
+                "fromLabel": "From",
+                "toLabel": "To",
+                "customRangeLabel": "Custom",
+                "daysOfWeek": [
+                    "Di","Lu","Ma","Me","Je","Ve","Sa"
+                ],
+                "monthNames": [
+                    "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+                    "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+                ],
+                "firstDay": 1
 	        }
 	    });
 	    $('input[name="dates"]').on('apply.daterangepicker', function (ev, picker) {

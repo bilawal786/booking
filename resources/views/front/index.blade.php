@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <?php
+    $gs = App\GeneralSettings::find(1);
+    ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,6 +40,13 @@
             margin-right: auto;
             width: 50%;
         }
+        .content-left-wrapper.bg_restaurant:before {
+            background: url({{asset($gs->image)}}) center center no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
     </style>
 </head>
 
@@ -62,11 +72,12 @@
         <div class="col-lg-6 content-left">
             <div class="content-left-wrapper bg_restaurant">
                 <div class="wrapper">
-                    <a href="{{route('front.index')}}" id="logo"><img src="{{asset('front/logo.png')}}" alt="" width="300" height="100"></a>
+                    <a href="{{route('front.index')}}" id="logo">
+                        <img src="{{asset($gs->logo)}}" alt="" width="300" height="100"></a>
                     <!-- /social -->
                     <div class="left_title">
-                        <h3>Réservez n'importe quel service</h3>
-                        <p>Mr. Bricolage Guadeloupe</p>
+                        <h3>{{$gs->h1}}</h3>
+                        <p>{{$gs->h2}}</p>
                     </div>
                 </div>
             </div>
