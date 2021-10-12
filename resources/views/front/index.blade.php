@@ -112,12 +112,16 @@
                                 <div class="styled-select clearfix">
                                     <select class="wide time required" name="time">
                                         <option value="">Heure préférée</option>
-                                        <option value="07:30:00">07.30 PM</option>
-                                        <option value="08:00:00">08.00 PM</option>
-                                        <option value="08:30:00">08.30 PM</option>
-                                        <option value="09:00:00">09.00 PM</option>
-                                        <option value="09:30:00">09.30 PM</option>
-                                        <option value="10:00:00">10.00 PM</option>
+                                        <option value="09:00:00">09h00</option>
+                                        <option value="10:00:00">10h00</option>
+                                        <option value="11:00:00">11h00</option>
+                                        <option value="12:00:00">12h00</option>
+                                        <option value="13:00:00">13h00</option>
+                                        <option value="14:00:00">14h00</option>
+                                        <option value="15:00:00">15h00</option>
+                                        <option value="16:00:00">16h00</option>
+                                        <option value="17:00:00">17h00</option>
+                                        <option value="18:00:00">18h00</option>
                                     </select>
                                 </div>
                             </div>
